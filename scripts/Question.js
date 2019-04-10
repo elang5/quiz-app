@@ -1,7 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 /* global question */
 
 'use strict';
 
+// eslint-disable-next-line no-unused-vars
 const question = (function () {
   class Question {
     constructor(text, answers, correctAnswer) {

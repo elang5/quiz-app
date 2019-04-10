@@ -1,4 +1,6 @@
 // eslint-disable-next-line no-unused-vars
+'use strict';
+
 const Renderer = function(){
   const renderers = [];
 

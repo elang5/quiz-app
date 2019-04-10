@@ -1,4 +1,4 @@
-/* global Question */
+/* global question Question  */
 
 'use strict';
 
@@ -8,12 +8,12 @@ const api = (function () {
       this.BASE_URL = 'https://opentdb.com/api.php?amount=5';
     }
   
-    getItems(passedQuiz) {
+    getItems(Quiz) {
       return fetch(this.BASE_URL)
         .then(res => res.json())
         .then(data => data.results.forEach(item => {       
           item.incorrect_answers.push(item.correct_answer);
-          passedQuiz.unasked.push(new Question(item.question, item.incorrect_answers, item.correct_answer));
+          Quiz.unasked.push(new question.Question(item.question, item.incorrect_answers, item.correct_answer));
         })
                   
         );}

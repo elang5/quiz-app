@@ -1,6 +1,6 @@
-/* global Model QuizApi */
+/* global api Model Quiz QuizApi */
 'use strict';
-
+// eslint-disable-next-line no-unused-vars
 class Quiz extends Model {         
 
   constructor() {
@@ -14,7 +14,7 @@ class Quiz extends Model {
   }
 
   generateQuizApi() {
-    const quizApi = new QuizApi();
+    const quizApi = new api.QuizApi();
     return quizApi.getItems(this);
   }
 
@@ -35,7 +35,6 @@ class Quiz extends Model {
     if (this.unasked.length > 0) {
       this.asked.push(this.activeQuestion);
     }
-
     this.unasked[0].submitAnswer(userAnswer);
     let currentScore = parseInt(this.unasked[0].answerStatus());
     this.score += currentScore;
@@ -46,11 +45,9 @@ class Quiz extends Model {
       }
       this.end();
     }
-
   }
 
-  resetGame()
-  {
+  resetQuiz() {
     this.unasked = [];
     this.score = 0;
     this.start();
