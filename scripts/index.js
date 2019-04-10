@@ -1,4 +1,6 @@
-/* global Quiz, QuizDisplay, QuizStatus */
+/* global Quiz, QuizDisplay, QuizStatus $ */
+
+'use strict';
 
 // By putting these variables in global scope, you can experiment with them in
 // the debug console.

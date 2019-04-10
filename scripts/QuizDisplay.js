@@ -1,5 +1,7 @@
 /* global Renderer */
 
+'use strict';
+
 class QuizDisplay extends Renderer {    // eslint-disable-line no-unused-vars
   getEvents() {
     return {
