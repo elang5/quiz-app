@@ -102,7 +102,6 @@ class QuizDisplay extends Renderer {    // eslint-disable-line no-unused-vars
 
   handleAnswerSubmit() {
     let userAnswer = $('input[name=radioBtn]:checked').val();
-    console.log(userAnswer);
     this.model.submitAnswer(userAnswer);
     this._generateResponse();
     this.model.update();
